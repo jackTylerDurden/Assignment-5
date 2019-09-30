@@ -6,8 +6,7 @@ sass.compiler = require('node-sass');
 function generateCSS(){
     return src('src/*.scss')
     .pipe(sass())     
-    .pipe(dest('dist/css'));
-    // .pipe(dest(minifyCSS()));    
+    .pipe(dest('dist/css'));    
 };
 
 function minifyCSS(){    
@@ -19,7 +18,4 @@ function minifyCSS(){
 function init(){
     watch('src/*.scss',series(generateCSS,minifyCSS));            
 };
-
-
-
 exports.default = init;
