@@ -1,0 +1,24 @@
+@mixin social-media-div($x-position:0px, $y-position:0px) {
+    float:left;
+    margin-right:5px;
+    background: url($footer-bg-image) $x-position $y-position;
+}
+
+
+@mixin header-config($color:red, $font-weight:100, $font-size:2em, $line-height:0) {
+    color:$color;
+    font-weight:$font-weight;
+    font-size:$font-size;
+    line-height:$line-height;
+}
+
+@mixin set-height-width($height:100%,$width:940px) {
+    height: $height;
+    width: $width;
+}
+
+@mixin media-query($width:959px) {
+    @media screen and (max-width:$width){
+        @content;
+    }    
+}

@@ -1,0 +1,26 @@
+body{
+    font-family: $font-family;
+    font-size:1em;
+    line-height:2em;
+    background:url($body-bg-image) $white repeat-x;margin:0;
+}
+main{
+    width:940px;
+    @include media-query(959px){
+        width:768px;
+    }
+    @include media-query(767px){
+        width:460px;
+    }
+    @include media-query(459px){
+        width:300px;
+    }
+    margin:0 auto;
+    padding:0 10px;
+}
+
+select{
+    @include media-query(459px){
+        width:95%;
+    }    
+}
