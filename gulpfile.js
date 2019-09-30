@@ -16,6 +16,6 @@ function minifyCSS(){
 }
 
 function init(){
-    watch('src/*.scss',series(generateCSS,minifyCSS));            
+    watch('src/**/*.scss',series(generateCSS,minifyCSS));            
 };
 exports.default = init;
